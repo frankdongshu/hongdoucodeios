@@ -4,26 +4,21 @@ workflows:
     instance_type: mac_mini_m1
     max_build_duration: 120
     environment:
-      groups:
-        # 璇佷功鍜屾弿杩版枃浠堕渶瑕佸湪 Codemagic 涓厤缃?
-        # 1. 鎵撳紑 https://codemagic.io/teams/YOUR_TEAM/settings/secrets
-        # 2. 娣诲姞浠ヤ笅鏂囦欢锛?
-        #    - CM_CERTIFICATE: 涓婁紶浣犵殑 .p12 璇佷功
-        #    - CM_CERTIFICATE_PASSWORD: p12 璇佷功鐨勫瘑鐮?
-        #    - CM_PROVISIONING_PROFILE: 涓婁紶 .mobileprovision 鎻忚堪鏂囦欢
-        - ios_certs
+      # App Store Connect API Key 璁剧疆
+      # 鍦?Environment variables 涓缃互涓嬪彉閲忥細
+      # APP_STORE_CONNECT_ISSUER_ID
+      # APP_STORE_CONNECT_KEY_IDENTIFIER  
+      # APP_STORE_CONNECT_PRIVATE_KEY
       vars:
         XCODE_WORKSPACE: "PartTimeJobs.xcworkspace"
         XCODE_SCHEME: "PartTimeJobs"
         BUNDLE_ID: "com.student.PartTimeJobs"
-        APP_STORE_APP_ID: 1234567890
     cache:
       cache_paths:
         - $HOME/Library/Caches/CocoaPods
     triggering:
       events:
         - push
-        - pull_request
       branch_patterns:
         - pattern: master
           include: true
@@ -35,14 +30,13 @@ workflows:
       
       - name: Fetch signing files
         script: |
-          # 杩欓噷浼氳嚜鍔ㄤ娇鐢ㄤ綘鍦?Codemagic 涓厤缃殑璇佷功鍜屾弿杩版枃浠?
-          # 闇€瑕佸厛鍦?Environment variables 涓缃細
-          # - CM_CERTIFICATE (base64 缂栫爜鐨?.p12 鏂囦欢)
-          # - CM_CERTIFICATE_PASSWORD
-          # - CM_PROVISIONING_PROFILE (base64 缂栫爜鐨?.mobileprovision 鏂囦欢)
+          # 浣跨敤鐜鍙橀噺鑷姩绛惧悕
           app-store-connect fetch-signing-files "$BUNDLE_ID" \
             --type IOS_APP_ADHOC \
-            --create
+            --create \
+            --issuer-id "$APP_STORE_CONNECT_ISSUER_ID" \
+            --key-id "$APP_STORE_CONNECT_KEY_IDENTIFIER" \
+            --private-key "$(echo "$APP_STORE_CONNECT_PRIVATE_KEY" | base64 -d)"
       
       - name: Use system default keychain
         script: |
@@ -69,24 +63,6 @@ workflows:
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
     publishing:
-      # 涓婁紶鍒拌挷鍏嫳
-      scripts:
-        - name: Upload to Pgyer
-          script: |
-            # 闇€瑕佽缃?PGYER_API_KEY 鐜鍙橀噺
-            # 鍦?Codemagic 涓坊鍔狅細PGYER_API_KEY (钂插叕鑻辩殑 API Key)
-            if [ -n "$PGYER_API_KEY" ]; then
-              IPA_PATH=$(find build/ios/ipa -name "*.ipa" | head -1)
-              if [ -f "$IPA_PATH" ]; then
-                echo "Uploading to Pgyer..."
-                curl -F "file=@$IPA_PATH" \
-                     -F "_api_key=$PGYER_API_KEY" \
-                     -F "buildUpdateDescription=Build from Codemagic" \
-                     https://www.pgyer.com/apiv2/app/upload
-              fi
-            else
-              echo "PGYER_API_KEY not set, skipping upload to Pgyer"
-            fi
       email:
         recipients:
           - 364286393@qq.com
