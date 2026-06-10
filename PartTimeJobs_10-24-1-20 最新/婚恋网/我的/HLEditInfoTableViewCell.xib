@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="53" id="KGk-i7-Jjw" customClass="HLEditInfoTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="53"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="53"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="GA0-5j-vJg">
+                        <rect key="frame" x="311" y="19" width="8" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="NN2-8v-d5r"/>
+                            <constraint firstAttribute="height" constant="15" id="SpI-Bt-j4k"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="毕业院校" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qsY-pi-s1n">
+                        <rect key="frame" x="15" y="16.5" width="80" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="eqV-fM-otk"/>
+                            <constraint firstAttribute="width" constant="80" id="qVz-pM-0Dv"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.21176470588235294" green="0.2196078431372549" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wL-sK-jXe">
+                        <rect key="frame" x="307" y="11.5" width="0.0" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Feg-Uz-yqG"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.55294117647058827" green="0.60392156862745094" blue="0.6705882352941176" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_dot" translatesAutoresizingMaskIntoConstraints="NO" id="qDk-F3-Htz">
+                        <rect key="frame" x="298" y="19" width="8" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="FH8-iC-aNu"/>
+                            <constraint firstAttribute="width" constant="8" id="q4t-vc-pI9"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="GA0-5j-vJg" firstAttribute="leading" secondItem="qDk-F3-Htz" secondAttribute="trailing" constant="5" id="Bg6-kG-BCi"/>
+                    <constraint firstItem="GA0-5j-vJg" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Dr9-fg-JcN"/>
+                    <constraint firstItem="qDk-F3-Htz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="HDl-lM-eJ5"/>
+                    <constraint firstAttribute="trailing" secondItem="GA0-5j-vJg" secondAttribute="trailing" constant="15" id="LQZ-ab-B8s"/>
+                    <constraint firstItem="GA0-5j-vJg" firstAttribute="leading" secondItem="5wL-sK-jXe" secondAttribute="trailing" constant="4" id="e8n-kF-3Qc"/>
+                    <constraint firstItem="qsY-pi-s1n" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="gfT-nh-O2v"/>
+                    <constraint firstItem="qsY-pi-s1n" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="oQ0-ze-b8X"/>
+                    <constraint firstItem="5wL-sK-jXe" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="qDZ-94-yxn"/>
+                    <constraint firstItem="5wL-sK-jXe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="qsY-pi-s1n" secondAttribute="trailing" constant="8" id="qxy-CT-IVD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLable" destination="5wL-sK-jXe" id="vCg-4S-XNl"/>
+                <outlet property="nextImageView" destination="GA0-5j-vJg" id="G7g-n8-drm"/>
+                <outlet property="redImgView" destination="qDk-F3-Htz" id="UwP-lK-1i4"/>
+                <outlet property="titleLable" destination="qsY-pi-s1n" id="erv-tL-ACk"/>
+            </connections>
+            <point key="canvasLocation" x="130.43478260869566" y="153.01339285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="next" width="8" height="15"/>
+        <image name="red_dot" width="6.5" height="7"/>
+    </resources>
+</document>

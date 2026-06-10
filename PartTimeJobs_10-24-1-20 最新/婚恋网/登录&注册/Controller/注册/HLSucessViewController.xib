@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HLSucessViewController">
+            <connections>
+                <outlet property="headerView" destination="TUv-G6-DrD" id="T7Q-E1-Xmu"/>
+                <outlet property="messageLable" destination="LD1-Es-Gmm" id="lGq-nw-epc"/>
+                <outlet property="timeLable" destination="uwU-xb-zaJ" id="Odd-mK-Iqe"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TUv-G6-DrD">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="205"/>
+                    <color key="backgroundColor" red="0.74117647058823533" green="0.39215686274509803" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="TUv-G6-DrD" secondAttribute="height" multiplier="75:41" id="ayE-Oq-V4z"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_finish" translatesAutoresizingMaskIntoConstraints="NO" id="qi9-14-CJM">
+                    <rect key="frame" x="112" y="129.5" width="151" height="151"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="151" id="1eY-o8-vlF"/>
+                        <constraint firstAttribute="width" constant="151" id="3cb-3m-SR2"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="60"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="恭喜您，密码重置成功！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LD1-Es-Gmm">
+                    <rect key="frame" x="82.5" y="289.5" width="210" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="210" id="6yS-xQ-j0u"/>
+                        <constraint firstAttribute="height" constant="21" id="ZTO-a6-833"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.20784313725490194" green="0.2196078431372549" blue="0.28627450980392155" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统15秒后自动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uwU-xb-zaJ">
+                    <rect key="frame" x="72.5" y="342.5" width="132" height="22"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="22" id="G4j-AF-ImW"/>
+                        <constraint firstAttribute="width" constant="132" id="bfT-vg-av4"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <color key="textColor" red="0.20784313730000001" green="0.21960784310000001" blue="0.28627450980000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgA-Mm-maf">
+                    <rect key="frame" x="206.5" y="344" width="93" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="93" id="T1h-Or-Xpy"/>
+                        <constraint firstAttribute="height" constant="20" id="fC9-nr-Acc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="返回登录页">
+                        <color key="titleColor" red="0.5490196078431373" green="0.28627450980392155" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="backButtonClick:" destination="-1" eventType="touchUpInside" id="ZXY-SY-5lg"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TUv-G6-DrD" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4ad-KM-2cS"/>
+                <constraint firstAttribute="trailing" secondItem="TUv-G6-DrD" secondAttribute="trailing" id="57b-Px-6yM"/>
+                <constraint firstItem="TUv-G6-DrD" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="89K-1a-Ada"/>
+                <constraint firstItem="qi9-14-CJM" firstAttribute="bottom" secondItem="TUv-G6-DrD" secondAttribute="bottom" constant="75.5" id="Dtl-Wm-VTo"/>
+                <constraint firstItem="wgA-Mm-maf" firstAttribute="leading" secondItem="uwU-xb-zaJ" secondAttribute="trailing" constant="2" id="I5T-88-4ao"/>
+                <constraint firstItem="uwU-xb-zaJ" firstAttribute="leading" secondItem="LD1-Es-Gmm" secondAttribute="leading" constant="-10" id="Ige-oJ-VpE"/>
+                <constraint firstItem="qi9-14-CJM" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cv7-Cq-mpk"/>
+                <constraint firstItem="uwU-xb-zaJ" firstAttribute="top" secondItem="LD1-Es-Gmm" secondAttribute="bottom" constant="32" id="ipn-xO-7Mp"/>
+                <constraint firstItem="LD1-Es-Gmm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="kKK-zc-Kne"/>
+                <constraint firstItem="LD1-Es-Gmm" firstAttribute="top" secondItem="qi9-14-CJM" secondAttribute="bottom" constant="9" id="l8N-12-QGF"/>
+                <constraint firstItem="wgA-Mm-maf" firstAttribute="centerY" secondItem="uwU-xb-zaJ" secondAttribute="centerY" constant="0.5" id="pkj-Jt-3EI"/>
+            </constraints>
+            <point key="canvasLocation" x="53.600000000000001" y="48.125937031484263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_finish" width="151" height="151"/>
+    </resources>
+</document>
