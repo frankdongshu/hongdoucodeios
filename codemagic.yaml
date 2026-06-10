@@ -4,19 +4,12 @@ workflows:
     instance_type: mac_mini_m1
     max_build_duration: 120
     environment:
+      # App Store Connect API 瀵嗛挜 - 鐢ㄤ簬鑷姩绛惧悕
+      # 杩欎簺鍙橀噺浼氳 app-store-connect CLI 鑷姩璇嗗埆
       vars:
         XCODE_WORKSPACE: "PartTimeJobs.xcworkspace"
         XCODE_SCHEME: "PartTimeJobs"
         BUNDLE_ID: "com.student.PartTimeJobs"
-        APP_STORE_CONNECT_ISSUER_ID: "5ebaff43-62d2-4645-8e59-1714ad9794f5"
-        APP_STORE_CONNECT_KEY_IDENTIFIER: "NBP7P7363K"
-        APP_STORE_CONNECT_PRIVATE_KEY: |
-          -----BEGIN PRIVATE KEY-----
-          MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgyew60C7FQ/ZK4eeT
-          TU4RWcrw9Fs7o6CX/uUwbxngvrOgCgYIKoZIzj0DAQehRANCAASLC9+5Ax30gtUR
-          9yofbPbKQDbKa03I/+2VpXfSvv6WQQQqpZkLPwTR2U+clpfVjesHkuwK4vehQsg4
-          4GpC276P
-          -----END PRIVATE KEY-----
     cache:
       cache_paths:
         - $HOME/Library/Caches/CocoaPods
@@ -32,12 +25,31 @@ workflows:
         script: |
           keychain initialize
       
+      - name: Export API Key to environment
+        script: |
+          # 璁剧疆 App Store Connect API 瀵嗛挜鐜鍙橀噺
+          export APP_STORE_CONNECT_ISSUER_ID="5ebaff43-62d2-4645-8e59-1714ad9794f5"
+          export APP_STORE_CONNECT_KEY_IDENTIFIER="NBP7P7363K"
+          # 灏嗙閽ュ啓鍏ユ枃浠?
+          echo "-----BEGIN PRIVATE KEY-----" > /tmp/AuthKey_NBP7P7363K.p8
+          echo "MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgyew60C7FQ/ZK4eeT" >> /tmp/AuthKey_NBP7P7363K.p8
+          echo "TU4RWcrw9Fs7o6CX/uUwbxngvrOgCgYIKoZIzj0DAQehRANCAASLC9+5Ax30gtUR" >> /tmp/AuthKey_NBP7P7363K.p8
+          echo "9yofbPbKQDbKa03I/+2VpXfSvv6WQQQqpZkLPwTR2U+clpfVjesHkuwK4vehQsg4" >> /tmp/AuthKey_NBP7P7363K.p8
+          echo "4GpC276P" >> /tmp/AuthKey_NBP7P7363K.p8
+          echo "-----END PRIVATE KEY-----" >> /tmp/AuthKey_NBP7P7363K.p8
+          export APP_STORE_CONNECT_PRIVATE_KEY_PATH=/tmp/AuthKey_NBP7P7363K.p8
+          
+          echo "API Key configured successfully"
+          ls -la /tmp/AuthKey_*.p8
+      
       - name: Fetch signing files
         script: |
-          echo $APP_STORE_CONNECT_PRIVATE_KEY > /tmp/authkey.p8
           app-store-connect fetch-signing-files "$BUNDLE_ID" \
             --type IOS_APP_ADHOC \
-            --create
+            --create \
+            --issuer-id "5ebaff43-62d2-4645-8e59-1714ad9794f5" \
+            --key-id "NBP7P7363K" \
+            --private-key-path /tmp/AuthKey_NBP7P7363K.p8
       
       - name: Use system default keychain
         script: |
