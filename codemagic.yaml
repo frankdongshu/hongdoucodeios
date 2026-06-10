@@ -4,15 +4,19 @@ workflows:
     instance_type: mac_mini_m1
     max_build_duration: 120
     environment:
-      # App Store Connect API Key 璁剧疆
-      # 鍦?Environment variables 涓缃互涓嬪彉閲忥細
-      # APP_STORE_CONNECT_ISSUER_ID
-      # APP_STORE_CONNECT_KEY_IDENTIFIER  
-      # APP_STORE_CONNECT_PRIVATE_KEY
       vars:
         XCODE_WORKSPACE: "PartTimeJobs.xcworkspace"
         XCODE_SCHEME: "PartTimeJobs"
         BUNDLE_ID: "com.student.PartTimeJobs"
+        APP_STORE_CONNECT_ISSUER_ID: "5ebaff43-62d2-4645-8e59-1714ad9794f5"
+        APP_STORE_CONNECT_KEY_IDENTIFIER: "NBP7P7363K"
+        APP_STORE_CONNECT_PRIVATE_KEY: |
+          -----BEGIN PRIVATE KEY-----
+          MIGTAgEAMBMGByqGSM49AgEGCCqGSM49AwEHBHkwdwIBAQQgyew60C7FQ/ZK4eeT
+          TU4RWcrw9Fs7o6CX/uUwbxngvrOgCgYIKoZIzj0DAQehRANCAASLC9+5Ax30gtUR
+          9yofbPbKQDbKa03I/+2VpXfSvv6WQQQqpZkLPwTR2U+clpfVjesHkuwK4vehQsg4
+          4GpC276P
+          -----END PRIVATE KEY-----
     cache:
       cache_paths:
         - $HOME/Library/Caches/CocoaPods
@@ -30,13 +34,10 @@ workflows:
       
       - name: Fetch signing files
         script: |
-          # 浣跨敤鐜鍙橀噺鑷姩绛惧悕
+          echo $APP_STORE_CONNECT_PRIVATE_KEY > /tmp/authkey.p8
           app-store-connect fetch-signing-files "$BUNDLE_ID" \
             --type IOS_APP_ADHOC \
-            --create \
-            --issuer-id "$APP_STORE_CONNECT_ISSUER_ID" \
-            --key-id "$APP_STORE_CONNECT_KEY_IDENTIFIER" \
-            --private-key "$(echo "$APP_STORE_CONNECT_PRIVATE_KEY" | base64 -d)"
+            --create
       
       - name: Use system default keychain
         script: |
