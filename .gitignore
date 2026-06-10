@@ -23,6 +23,11 @@ Icon?
 .env
 .env.local
 
+# Binary / Static Libraries
+*.a
+*.framework/
+*.dylib
+
 # Others
 *.ipa
 *.dSYM.zip
