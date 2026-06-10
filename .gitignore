@@ -1,0 +1,29 @@
+# Xcode
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+DerivedData/
+Build/
+
+# CocoaPods
+Pods/
+*.xcworkspace/xcshareddata/
+
+# OS X
+.DS_Store
+__MACOSX/
+Icon?
+
+# IDE
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+
+# Others
+*.ipa
+*.dSYM.zip
+*.dSYM
