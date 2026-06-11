@@ -1,0 +1,28 @@
+//
+//  HLRealHeadSelectView.h
+//  hongdou
+//
+//  Created by 维康1 on 2021/8/25.
+//  Copyright © 2021 红豆-婚恋网. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface HLRealHeadSelectView : UIView
+
+// 开启状态
+@property (nonatomic, strong) NSDictionary *params;
+
+// 是否只看同城
+@property (nonatomic, assign) BOOL isSwichOn;
+
+@property (nonatomic, copy) void(^SelectBlock)(BOOL isSelect);
+
+-(void)showSelf;
+-(void)removeSelf;
+
+@end
+
+NS_ASSUME_NONNULL_END

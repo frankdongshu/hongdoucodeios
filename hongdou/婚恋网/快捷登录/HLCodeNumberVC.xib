@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HLCodeNumberVC">
+            <connections>
+                <outlet property="codeBtn" destination="sz5-Mt-byq" id="Bto-Hj-nzP"/>
+                <outlet property="coverView" destination="diA-o1-FiU" id="vwZ-w3-IAb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hdW-wg-XDA">
+                    <rect key="frame" x="17" y="66" width="44" height="24"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="gLP-aL-jij"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" image="back">
+                        <color key="titleColor" red="0.1333333333" green="0.13725490200000001" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="diA-o1-FiU">
+                    <rect key="frame" x="28" y="214" width="358" height="66"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="66" id="LMA-qP-KfI"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdt-8z-IPm">
+                    <rect key="frame" x="28" y="139" width="150" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="2RW-6x-ykB"/>
+                        <constraint firstAttribute="height" constant="33" id="YDA-Sg-g5e"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cSg-YJ-Kuu">
+                    <rect key="frame" x="77" y="377" width="260" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="ebQ-O5-TwS"/>
+                    </constraints>
+                    <state key="normal" title="下一步" backgroundImage="btn_42px">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextClick:" destination="-1" eventType="touchUpInside" id="0Vc-0u-3Zn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sz5-Mt-byq">
+                    <rect key="frame" x="356" y="295" width="30" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal">
+                        <color key="titleColor" red="0.55294117649999996" green="0.60392156860000001" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="requestCodeClick:" destination="-1" eventType="touchUpInside" id="WQQ-QN-yKk"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="sz5-Mt-byq" firstAttribute="top" secondItem="diA-o1-FiU" secondAttribute="bottom" constant="15" id="0CB-Jw-vjL"/>
+                <constraint firstItem="Rdt-8z-IPm" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="28" id="0ib-zt-eWH"/>
+                <constraint firstItem="hdW-wg-XDA" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="22" id="5LZ-8J-QI4"/>
+                <constraint firstItem="cSg-YJ-Kuu" firstAttribute="top" secondItem="sz5-Mt-byq" secondAttribute="bottom" constant="50" id="KtM-2G-pUG"/>
+                <constraint firstItem="cSg-YJ-Kuu" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="MyQ-Ea-TxB"/>
+                <constraint firstItem="Rdt-8z-IPm" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="95" id="d3I-79-rPG"/>
+                <constraint firstItem="diA-o1-FiU" firstAttribute="leading" secondItem="Rdt-8z-IPm" secondAttribute="leading" id="mdF-Gq-73I"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="diA-o1-FiU" secondAttribute="trailing" constant="28" id="n3q-zX-rY6"/>
+                <constraint firstItem="diA-o1-FiU" firstAttribute="top" secondItem="Rdt-8z-IPm" secondAttribute="bottom" constant="42" id="rzs-Wp-dPt"/>
+                <constraint firstItem="sz5-Mt-byq" firstAttribute="trailing" secondItem="diA-o1-FiU" secondAttribute="trailing" id="tDs-Hk-RGQ"/>
+                <constraint firstItem="hdW-wg-XDA" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="17" id="u5w-2b-Tkd"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="53.571428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="back" width="44" height="15"/>
+        <image name="btn_42px" width="260" height="42"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

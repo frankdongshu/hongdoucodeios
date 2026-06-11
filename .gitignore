@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+__MACOSX/
+
+# Xcode
+*.xcworkspace
+xcuserdata/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+build/
+DerivedData/
+
+# Pods
+# 如果使用 CocoaPods 建议忽略 Pods 目录，让其他人 pod install
+Pods/
+
+# Carthage
+Carthage/Build
+
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+
+# Xcode schemes
+*.xcuserstate
+
+# App packaging
+*.app
+*.app.dSYM
+
+# Other
+*.log
+*.pyc
+.env
+.idea/
+*.swp
+*.swo

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HLRecCell">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="431" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="同城" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ohH-ma-8K3">
+                        <rect key="frame" x="15" y="0.0" width="35" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Kef-Eg-Rnc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.5568627451" green="0.4549019608" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下波推荐: 11:22:33 |" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oXD-am-qAx">
+                        <rect key="frame" x="183" y="0.0" width="151" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Evs-ze-ndq"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.55686274509803924" green="0.45490196078431372" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iPT-wZ-00S">
+                        <rect key="frame" x="334" y="9.5" width="82" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="a07-os-A9v"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" title="现在更新">
+                            <color key="baseForegroundColor" red="0.5568627451" green="0.4549019608" blue="0.87843137250000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="btnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="AoW-yw-1i4"/>
+                        </connections>
+                    </button>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VIx-F4-ZJh">
+                        <rect key="frame" x="57" y="9.5" width="49" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="1sh-iG-aR2"/>
+                            <constraint firstAttribute="width" constant="47" id="h8P-fn-wtx"/>
+                        </constraints>
+                        <color key="onTintColor" red="0.54901960780000003" green="0.28627450980000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="iPT-wZ-00S" firstAttribute="centerY" secondItem="oXD-am-qAx" secondAttribute="centerY" id="8t6-S0-jkO"/>
+                    <constraint firstAttribute="bottom" secondItem="ohH-ma-8K3" secondAttribute="bottom" id="8tN-ua-npp"/>
+                    <constraint firstAttribute="trailing" secondItem="iPT-wZ-00S" secondAttribute="trailing" constant="15" id="bEt-yr-l6p"/>
+                    <constraint firstItem="ohH-ma-8K3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="fRI-UO-Xz2"/>
+                    <constraint firstItem="VIx-F4-ZJh" firstAttribute="leading" secondItem="ohH-ma-8K3" secondAttribute="trailing" constant="7" id="jiu-hp-9Cn"/>
+                    <constraint firstItem="ohH-ma-8K3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qvg-9T-K0s"/>
+                    <constraint firstItem="VIx-F4-ZJh" firstAttribute="centerY" secondItem="ohH-ma-8K3" secondAttribute="centerY" id="tSv-Dg-Fs4"/>
+                    <constraint firstItem="oXD-am-qAx" firstAttribute="top" secondItem="ohH-ma-8K3" secondAttribute="top" id="vDh-bv-cVt"/>
+                    <constraint firstItem="iPT-wZ-00S" firstAttribute="leading" secondItem="oXD-am-qAx" secondAttribute="trailing" id="vy2-q2-VXV"/>
+                    <constraint firstItem="oXD-am-qAx" firstAttribute="bottom" secondItem="ohH-ma-8K3" secondAttribute="bottom" id="z6s-Ux-doK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="localLabel" destination="ohH-ma-8K3" id="pDy-0R-0Nl"/>
+                <outlet property="swicthOn" destination="VIx-F4-ZJh" id="Nbz-cC-Lfr"/>
+                <outlet property="timeLab" destination="oXD-am-qAx" id="T75-1w-uMl"/>
+            </connections>
+            <point key="canvasLocation" x="218.11594202898553" y="60.9375"/>
+        </tableViewCell>
+    </objects>
+</document>

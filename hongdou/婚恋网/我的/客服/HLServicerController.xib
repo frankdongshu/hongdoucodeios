@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HLServicerController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="servicer_head" translatesAutoresizingMaskIntoConstraints="NO" id="hQn-AV-6vM">
+                    <rect key="frame" x="162" y="139" width="90" height="90"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="90" id="e5e-bb-aol"/>
+                        <constraint firstAttribute="width" constant="90" id="kJB-Pz-MKH"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="周一至周五 9:00-18:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lio-Ir-JfY">
+                    <rect key="frame" x="0.0" y="295" width="414" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在线客服:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnE-dq-GL3">
+                    <rect key="frame" x="80" y="378" width="74" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="电话: 010-67569771" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0N-ky-XT8">
+                    <rect key="frame" x="80" y="424" width="156" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*在线咨询人员较多请耐心等待看到留言后会第一时间回复" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gft-aC-FUi">
+                    <rect key="frame" x="0.0" y="525" width="414" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" systemColor="systemPinkColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asD-5p-Kfw">
+                    <rect key="frame" x="162" y="371" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Au5-d6-7d4"/>
+                        <constraint firstAttribute="width" constant="35" id="KRs-Hw-PXQ"/>
+                    </constraints>
+                    <state key="normal" title="Button" image="servicer_message"/>
+                    <connections>
+                        <action selector="serviceClick:" destination="-1" eventType="touchUpInside" id="Dy2-pQ-WwM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Lio-Ir-JfY" secondAttribute="trailing" id="6ui-yr-RpF"/>
+                <constraint firstItem="asD-5p-Kfw" firstAttribute="leading" secondItem="pnE-dq-GL3" secondAttribute="trailing" constant="8" symbolic="YES" id="EAu-bi-qfa"/>
+                <constraint firstItem="hQn-AV-6vM" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="HIb-xO-7X9"/>
+                <constraint firstItem="pnE-dq-GL3" firstAttribute="top" secondItem="Lio-Ir-JfY" secondAttribute="bottom" constant="62" id="LOw-ue-zh0"/>
+                <constraint firstItem="J0N-ky-XT8" firstAttribute="top" secondItem="pnE-dq-GL3" secondAttribute="bottom" constant="25" id="RdY-cc-1bG"/>
+                <constraint firstItem="gft-aC-FUi" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="UEm-7c-rPw"/>
+                <constraint firstItem="hQn-AV-6vM" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="95" id="VkS-b5-qgU"/>
+                <constraint firstItem="gft-aC-FUi" firstAttribute="top" secondItem="J0N-ky-XT8" secondAttribute="bottom" constant="80" id="aNq-j9-ZdB"/>
+                <constraint firstItem="Lio-Ir-JfY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="bjl-wQ-jKa"/>
+                <constraint firstItem="pnE-dq-GL3" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="80" id="fOx-cK-9Hx"/>
+                <constraint firstItem="asD-5p-Kfw" firstAttribute="centerY" secondItem="pnE-dq-GL3" secondAttribute="centerY" id="gp5-6h-8rv"/>
+                <constraint firstItem="Lio-Ir-JfY" firstAttribute="top" secondItem="hQn-AV-6vM" secondAttribute="bottom" constant="66" id="na5-cX-DtT"/>
+                <constraint firstItem="J0N-ky-XT8" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="80" id="yjU-Dn-WpV"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="gft-aC-FUi" secondAttribute="trailing" id="ywR-NR-JiQ"/>
+            </constraints>
+            <point key="canvasLocation" x="79.710144927536234" y="93.75"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="servicer_head" width="1389" height="1389"/>
+        <image name="servicer_message" width="1200" height="1200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

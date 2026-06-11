@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HLCityViewController">
+            <connections>
+                <outlet property="cityTF" destination="d5n-IM-LKc" id="7wj-yh-dg1"/>
+                <outlet property="view" destination="ufA-1O-xll" id="jMy-Gt-vsb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ufA-1O-xll">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请选择城市" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GGP-Uh-Wc9">
+                    <rect key="frame" x="28" y="139" width="150" height="33"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="33" id="5yf-c8-udZ"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="kEF-Hp-s0A"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请选择城市" textAlignment="justified" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="d5n-IM-LKc">
+                    <rect key="frame" x="28" y="236" width="358" height="30"/>
+                    <color key="tintColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="6sw-OZ-5FR"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                </textField>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="next" translatesAutoresizingMaskIntoConstraints="NO" id="7R5-9Z-teb">
+                    <rect key="frame" x="370" y="241" width="16" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="16" id="L6i-be-ixw"/>
+                        <constraint firstAttribute="height" constant="20" id="eI6-lB-Iyk"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lc-U7-VbD">
+                    <rect key="frame" x="77" y="366" width="260" height="42"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="42" id="h1V-wf-XPX"/>
+                    </constraints>
+                    <state key="normal" title="下一步" backgroundImage="btn_42px">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="nextClick:" destination="-1" eventType="touchUpInside" id="Mdd-qB-hZV"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHU-Rb-yGa">
+                    <rect key="frame" x="0.0" y="236" width="414" height="30"/>
+                    <connections>
+                        <action selector="selectClick:" destination="-1" eventType="touchUpInside" id="6dG-VD-tvh"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="3aJ-w9-UoJ"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="3aJ-w9-UoJ" firstAttribute="leading" secondItem="AHU-Rb-yGa" secondAttribute="leading" id="0P9-vj-o8G"/>
+                <constraint firstItem="3aJ-w9-UoJ" firstAttribute="trailing" secondItem="AHU-Rb-yGa" secondAttribute="trailing" id="3gt-Zy-G35"/>
+                <constraint firstItem="3aJ-w9-UoJ" firstAttribute="trailing" secondItem="d5n-IM-LKc" secondAttribute="trailing" constant="28" id="FXj-XZ-Jy1"/>
+                <constraint firstItem="GGP-Uh-Wc9" firstAttribute="leading" secondItem="3aJ-w9-UoJ" secondAttribute="leading" constant="28" id="PPf-Sb-Nr8"/>
+                <constraint firstItem="d5n-IM-LKc" firstAttribute="leading" secondItem="GGP-Uh-Wc9" secondAttribute="leading" id="Qsf-zx-u2i"/>
+                <constraint firstItem="AHU-Rb-yGa" firstAttribute="centerY" secondItem="d5n-IM-LKc" secondAttribute="centerY" id="eRf-H4-h5n"/>
+                <constraint firstItem="1lc-U7-VbD" firstAttribute="centerX" secondItem="3aJ-w9-UoJ" secondAttribute="centerX" id="eYL-ur-Ovh"/>
+                <constraint firstItem="7R5-9Z-teb" firstAttribute="trailing" secondItem="d5n-IM-LKc" secondAttribute="trailing" id="fHX-fr-EYC"/>
+                <constraint firstItem="GGP-Uh-Wc9" firstAttribute="top" secondItem="3aJ-w9-UoJ" secondAttribute="top" constant="95" id="iai-7O-QAO"/>
+                <constraint firstItem="AHU-Rb-yGa" firstAttribute="height" secondItem="d5n-IM-LKc" secondAttribute="height" id="iuA-gO-Hv3"/>
+                <constraint firstItem="7R5-9Z-teb" firstAttribute="centerY" secondItem="d5n-IM-LKc" secondAttribute="centerY" id="pca-y5-QPz"/>
+                <constraint firstItem="d5n-IM-LKc" firstAttribute="top" secondItem="GGP-Uh-Wc9" secondAttribute="bottom" constant="64" id="vVD-IK-QXK"/>
+                <constraint firstItem="1lc-U7-VbD" firstAttribute="top" secondItem="d5n-IM-LKc" secondAttribute="bottom" constant="100" id="xUJ-3s-01y"/>
+            </constraints>
+            <point key="canvasLocation" x="54" y="52"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="btn_42px" width="260" height="42"/>
+        <image name="next" width="8" height="15"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

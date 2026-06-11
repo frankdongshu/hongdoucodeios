@@ -1,0 +1,148 @@
+PODS:
+  - AFDownloadRequestOperation (2.0.1):
+    - AFNetworking (~> 2.0)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - AliyunOSSiOS (2.10.8)
+  - BaiduMapKit (4.1.1)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - GDTMobSDK (4.12.81):
+    - GDTMobSDK/GDTMobSDK (= 4.12.81)
+  - GDTMobSDK/GDTMobSDK (4.12.81)
+  - hpple (0.2.0)
+  - JCore (2.6.2)
+  - JMessage (3.9.1):
+    - JCore (>= 2.0.0)
+  - JPush (3.7.4):
+    - JCore (< 3.0.0, >= 2.0.0)
+  - JVerification (2.7.1):
+    - JCore (< 6.0.0, >= 2.1.6)
+  - JXCategoryView (1.5.5)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJRefresh (3.5.0)
+  - ReactiveCocoa (2.1.8):
+    - ReactiveCocoa/Core (= 2.1.8)
+    - ReactiveCocoa/no-arc (= 2.1.8)
+  - ReactiveCocoa/Core (2.1.8):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.1.8)
+  - SAMKeychain (1.5.3)
+  - SCSiriWaveformView (1.1.1)
+  - SDWebImage (3.8.3):
+    - SDWebImage/Core (= 3.8.3)
+  - SDWebImage/Core (3.8.3)
+  - SocketRocket (0.5.1)
+  - TZImagePickerController (3.3.1)
+  - TZImagePreviewController (0.3.1):
+    - TZImagePickerController (>= 3.1.7)
+  - "UIView+FDCollapsibleConstraints (1.1)"
+  - VODUpload (1.6.1):
+    - AliyunOSSiOS
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AFDownloadRequestOperation (~> 2.0.1)
+  - AFNetworking (~> 2.6.3)
+  - BaiduMapKit (~> 4.1.1)
+  - FMDB (~> 2.6.2)
+  - GDTMobSDK
+  - hpple (~> 0.2.0)
+  - JMessage (~> 3.9.1)
+  - JPush (= 3.7.4)
+  - JVerification
+  - JXCategoryView (~> 1.5.5)
+  - Masonry (= 1.1.0)
+  - MBProgressHUD (~> 1.0.0)
+  - MJRefresh
+  - ReactiveCocoa (~> 2.1.8)
+  - SAMKeychain (~> 1.5.0)
+  - SCSiriWaveformView (~> 1.1.1)
+  - SDWebImage (~> 3.8.1)
+  - SocketRocket
+  - TZImagePreviewController (~> 0.3.1)
+  - "UIView+FDCollapsibleConstraints (~> 1.1)"
+  - VODUpload (~> 1.6.1)
+  - YYKit (~> 1.0.9)
+
+SPEC REPOS:
+  trunk:
+    - AFDownloadRequestOperation
+    - AFNetworking
+    - AliyunOSSiOS
+    - BaiduMapKit
+    - FMDB
+    - GDTMobSDK
+    - hpple
+    - JCore
+    - JMessage
+    - JPush
+    - JVerification
+    - JXCategoryView
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - ReactiveCocoa
+    - SAMKeychain
+    - SCSiriWaveformView
+    - SDWebImage
+    - SocketRocket
+    - TZImagePickerController
+    - TZImagePreviewController
+    - "UIView+FDCollapsibleConstraints"
+    - VODUpload
+    - YYKit
+
+SPEC CHECKSUMS:
+  AFDownloadRequestOperation: 748a1643423e1ddb23f2178f778087d4f0ae8ac7
+  AFNetworking: a926f9357e3bc39d2c49c547e8e8dc90b36259b6
+  AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
+  BaiduMapKit: 51bba432a28316680676b4d453a70e5031f3a7eb
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  GDTMobSDK: c82ee3362542a6c988a9ead9ee65cc84c5409e2b
+  hpple: 3b765f96fc2cd56ad1a49aef6f7be5cb2aa64b57
+  JCore: 0cb4fc5892bc97af4f27283875369ead3eaa3067
+  JMessage: e1f8f78bafa4f03153cb925838a229a46e4b42ae
+  JPush: e455ad2a7b854bca8149df085772d6c4f79b2416
+  JVerification: 750dc6b4ce55e53d1095958267cfd2e9eb4398a1
+  JXCategoryView: 0293fcb356f10a5c2e679dac0a1a5f1899ee0c87
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
+  ReactiveCocoa: f89f2e009a87951b50321bf9feb958823fcc617e
+  SAMKeychain: 483e1c9f32984d50ca961e26818a534283b4cd5c
+  SCSiriWaveformView: 15b9dd6f94c7536e2032b34a35c6ff74d38c7411
+  SDWebImage: a72e880a8fe0f7fc31efe15aaed443c074d2a80c
+  SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
+  TZImagePickerController: 99f03b64145a8c92c55b9b1b931410967d9be4cb
+  TZImagePreviewController: b250c3819119f1b006f103ad44065d3f771a0e78
+  "UIView+FDCollapsibleConstraints": 9357eaf03b4e088263ab74a3b86a382a64ce38dd
+  VODUpload: 2c8ac654ceda839dda97a92023a270041dd9901e
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: aa638a9742ae9378335dd3263e59be43139aa566
+
+COCOAPODS: 1.16.2

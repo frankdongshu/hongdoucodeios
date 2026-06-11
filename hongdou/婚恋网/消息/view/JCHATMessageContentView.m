@@ -1,0 +1,236 @@
+//
+//  JCHATMessageContentView.m
+//  JChat
+//
+//  Created by HuminiOS on 15/11/2.
+//  Copyright © 2015年 HXHG. All rights reserved.
+//
+
+#import "JCHATMessageContentView.h"
+
+static NSInteger const textMessageContentTopOffset = 10;
+static NSInteger const textMessageContentRightOffset = 15;
+
+@implementation JCHATMessageContentView
+
+- (id)initWithFrame:(CGRect)frame {
+  self = [super initWithFrame:frame];
+  if (self != nil) {
+    [self attachTapHandler];
+
+  }
+  return self;
+}
+
+- (id)init {
+  self = [super init];
+  if (self != nil) {
+    _textContent = [UILabel new];
+    _textContent.numberOfLines = 0;
+    _textContent.backgroundColor = [UIColor clearColor];
+    _textContent.font = [UIFont systemFontOfSize:15.f];
+    _voiceConent = [UIImageView new];
+    _isReceivedSide = NO;
+    [self addSubview:_textContent];
+    [self addSubview:_voiceConent];
+  }
+  return self;
+}
+- (void)setMessageContentWith:(JMSGMessage *)message{
+    [self setMessageContentWith:message handler:nil];
+}
+- (void)setMessageContentWith:(JMSGMessage *)message handler:(void (^)(NSUInteger))block {
+    BOOL isReceived = [message isReceived];
+    _message = message;
+    UIImageView *maskView = nil;
+    UIImage *maskImage = nil;
+    if (isReceived) {
+        maskImage = [UIImage imageNamed:@"left_qipao"];
+    } else {
+        maskImage = [UIImage imageNamed:@"right_qipao"];
+    }
+    maskImage = [maskImage resizableImageWithCapInsets:UIEdgeInsetsMake(28, 20, 28, 20)];
+    [self setImage:maskImage];
+    maskView = [UIImageView new];
+    maskView.image = maskImage;
+    [maskView setFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+    self.maskView = maskView;
+    
+    self.contentMode = UIViewContentModeScaleToFill;
+  
+    
+    _textContent.textAlignment = NSTextAlignmentLeft;
+    switch (message.contentType) {
+        case kJMSGContentTypeText:
+            _voiceConent.hidden = YES;
+            _textContent.hidden = NO;
+            
+            if (isReceived) {
+                _textContent.textColor = [UIColor colorWithHex:0x333333];
+                [_textContent setFrame:CGRectMake(textMessageContentRightOffset + 5, textMessageContentTopOffset, self.frame.size.width - 2 * textMessageContentRightOffset, self.frame.size.height- 2 * textMessageContentTopOffset)];
+            } else {
+                _textContent.textColor = [UIColor colorWithHex:0xffffff];
+                [_textContent setFrame:CGRectMake(textMessageContentRightOffset - 5, textMessageContentTopOffset, self.frame.size.width - 2 * textMessageContentRightOffset, self.frame.size.height- 2 * textMessageContentTopOffset)];
+            }
+            _textContent.text = ((JMSGTextContent *)message.content).text;
+            break;
+            
+        case kJMSGContentTypeImage:
+        {
+            _voiceConent.hidden = YES;
+            _textContent.hidden = YES;
+            self.contentMode = UIViewContentModeScaleAspectFill;
+            [(JMSGImageContent *)message.content thumbImageData:^(NSData *data, NSString *objectId, NSError *error) {
+                if (error == nil) {
+                    if (data != nil) {
+                        [self setImage:[UIImage imageWithData:data]];
+                    } else {
+                        [self setImage:[UIImage imageNamed:@"receiveFail"]];
+                    }
+                } else {
+                    [self setImage:[UIImage imageNamed:@"receiveFail"]];
+                }
+                if (block) {
+                    NSData *imageData = UIImagePNGRepresentation(self.image);
+                    block(imageData.length);
+                }
+            }];
+        }
+            break;
+            
+        case kJMSGContentTypeVoice:
+        {
+            _textContent.hidden = YES;
+            _voiceConent.hidden = NO;
+            if (isReceived) {
+                [_voiceConent setFrame:CGRectMake(20, 15, 16, 20)];
+                [_voiceConent setImage:[UIImage imageNamed:@"ReceiverVoiceNodePlaying"]];
+            } else {
+                [_voiceConent setFrame:CGRectMake(self.frame.size.width - 35, 15, 16, 20)];
+                [_voiceConent setImage:[UIImage imageNamed:@"SenderVoiceNodePlaying"]];
+            }
+            [((JMSGVoiceContent *)message.content) voiceData:^(NSData *data, NSString *objectId, NSError *error) {
+                if (error == nil) {
+                    if (block) {
+                        block(data.length);
+                    }
+                } else {
+                    
+                }
+            }];
+        }
+            break;
+        case kJMSGContentTypeFile:{
+            _voiceConent.hidden = YES;
+            _textContent.hidden = NO;
+            self.contentMode = UIViewContentModeScaleAspectFit;
+            [self setImage:[UIImage imageNamed:@"file_message_bg"]];
+            
+            JMSGFileContent *fileContent = (JMSGFileContent *)message.content;
+            _textContent.text = fileContent.fileName;
+            _textContent.textAlignment = NSTextAlignmentRight;
+            _textContent.textColor = [UIColor colorWithHex:0x333333];
+            if (isReceived) {
+                [_textContent setFrame:CGRectMake(textMessageContentRightOffset + 5, textMessageContentTopOffset, self.frame.size.width - 2 * textMessageContentRightOffset, self.frame.size.height- 2 * textMessageContentTopOffset)];
+            } else {
+                [_textContent setFrame:CGRectMake(textMessageContentRightOffset - 5, textMessageContentTopOffset, self.frame.size.width - 2 * textMessageContentRightOffset, self.frame.size.height- 2 * textMessageContentTopOffset)];
+            }
+        }
+            break;
+            
+        case kJMSGContentTypeLocation:{
+            _voiceConent.hidden = YES;
+            _textContent.hidden = NO;
+            self.contentMode = UIViewContentModeScaleAspectFit;
+            [self setImage:[UIImage imageNamed:@"location_address"]];
+            
+            JMSGLocationContent *locationContent = (JMSGLocationContent *)message.content;
+            _textContent.text = locationContent.address;
+            _textContent.textColor = [UIColor colorWithHex:0x333333];
+            if (isReceived) {
+                [_textContent setFrame:CGRectMake(textMessageContentRightOffset + 5, textMessageContentTopOffset, self.frame.size.width - 2 * textMessageContentRightOffset, 40)];
+            } else {
+                [_textContent setFrame:CGRectMake(textMessageContentRightOffset - 5, textMessageContentTopOffset, self.frame.size.width - 2 * textMessageContentRightOffset, 40)];
+            }
+        }
+            break;
+        case kJMSGContentTypeUnknown:
+            _voiceConent.hidden = YES;
+            _textContent.hidden = NO;
+            _textContent.textColor = [UIColor colorWithHex:0x333333];
+
+            if (isReceived) {
+                
+                [_textContent setFrame:CGRectMake(textMessageContentRightOffset + 5, textMessageContentTopOffset, self.frame.size.width - 2 * textMessageContentRightOffset, self.frame.size.height- 2 * textMessageContentTopOffset)];
+            } else {
+                [_textContent setFrame:CGRectMake(textMessageContentRightOffset - 5, textMessageContentTopOffset, self.frame.size.width - 2 * textMessageContentRightOffset, self.frame.size.height- 2 * textMessageContentTopOffset)];
+            }
+            _textContent.text = @"未知消息";
+            break;
+        default:
+            break;
+    }
+  
+}
+
+- (BOOL)canBecomeFirstResponder{
+  return YES;
+}
+
+-(void)attachTapHandler{
+  self.userInteractionEnabled = YES;  //用户交互的总开关
+  UILongPressGestureRecognizer *touch = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+  touch.minimumPressDuration = 1.0;
+  [self addGestureRecognizer:touch];
+}
+
+-(void)handleTap:(UIGestureRecognizer*) recognizer {
+  [self becomeFirstResponder];
+  [[UIMenuController sharedMenuController] setTargetRect:self.frame inView:self.superview];
+  [[UIMenuController sharedMenuController] setMenuVisible:YES animated: YES];
+}
+
+-(BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+  if (_message.contentType == kJMSGContentTypeVoice) {
+    return action == @selector(delete:);
+  }
+  return (action == @selector(copy:) || action == @selector(delete:));
+}
+
+-(void)copy:(id)sender {
+  __block UIPasteboard *pboard = [UIPasteboard generalPasteboard];
+  switch (_message.contentType) {
+    case kJMSGContentTypeText:
+    {
+      JMSGTextContent *textContent = (JMSGTextContent *)_message.content;
+      pboard.string = textContent.text;
+    }
+      break;
+      
+    case kJMSGContentTypeImage:
+    {
+      JMSGImageContent *imgContent = (JMSGImageContent *)_message.content;
+      [imgContent thumbImageData:^(NSData *data, NSString *objectId, NSError *error) {
+        if (data == nil || error) {
+            [[UIApplication sharedApplication].keyWindow showTostWithMessage:@"获取图片失败"];
+          return ;
+        }
+        pboard.image = [UIImage imageWithData:data];
+      }];
+    }
+      break;
+      
+    case kJMSGContentTypeVoice:
+      break;
+    case kJMSGContentTypeUnknown:
+      break;
+    default:
+      break;
+  }
+  
+}
+
+-(void)delete:(id)sender {
+  [[NSNotificationCenter defaultCenter] postNotificationName:kDeleteMessage object:_message];
+}
+@end

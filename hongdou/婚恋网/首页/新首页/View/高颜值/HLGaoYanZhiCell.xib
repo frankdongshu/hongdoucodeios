@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="212" id="KGk-i7-Jjw" customClass="HLGaoYanZhiCell">
+            <rect key="frame" x="0.0" y="0.0" width="338" height="212"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="338" height="212"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WKW-qd-BQE">
+                        <rect key="frame" x="15" y="0.0" width="308" height="202"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="高颜值的在这里" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXq-3X-ZU7">
+                                <rect key="frame" x="10" y="10" width="108" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" red="0.2470588235" green="0.27450980390000002" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ka-t5-JIU">
+                                <rect key="frame" x="228" y="10" width="70" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="70" id="BiN-SK-SyG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                <state key="normal" title="换一换" image="huanyihua">
+                                    <color key="titleColor" red="0.2470588235" green="0.27450980390000002" blue="0.34509803919999998" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="huanClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="I3C-Fz-ZCP"/>
+                                </connections>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="sxn-wT-1VI">
+                                <rect key="frame" x="20" y="45" width="268" height="142"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="unU-vk-QQf"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xoj-ck-AdI">
+                                    <size key="itemSize" width="66" height="66"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <connections>
+                                    <outlet property="dataSource" destination="-1" id="Dmf-D3-oMb"/>
+                                    <outlet property="delegate" destination="-1" id="whP-S6-AL3"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="sxn-wT-1VI" secondAttribute="trailing" constant="20" id="HBx-Yu-cdH"/>
+                            <constraint firstAttribute="trailing" secondItem="0ka-t5-JIU" secondAttribute="trailing" constant="10" id="HdF-Vg-j7l"/>
+                            <constraint firstItem="sxn-wT-1VI" firstAttribute="leading" secondItem="WKW-qd-BQE" secondAttribute="leading" constant="20" id="NdA-o2-6UT"/>
+                            <constraint firstAttribute="bottom" secondItem="sxn-wT-1VI" secondAttribute="bottom" constant="15" id="lsJ-hm-Oby"/>
+                            <constraint firstItem="0ka-t5-JIU" firstAttribute="bottom" secondItem="YXq-3X-ZU7" secondAttribute="bottom" id="mes-7u-LhS"/>
+                            <constraint firstItem="YXq-3X-ZU7" firstAttribute="leading" secondItem="WKW-qd-BQE" secondAttribute="leading" constant="10" id="nrm-zg-fcf"/>
+                            <constraint firstItem="0ka-t5-JIU" firstAttribute="top" secondItem="YXq-3X-ZU7" secondAttribute="top" id="oOp-cA-tDg"/>
+                            <constraint firstItem="sxn-wT-1VI" firstAttribute="top" secondItem="YXq-3X-ZU7" secondAttribute="bottom" constant="15" id="r0E-bH-LRy"/>
+                            <constraint firstItem="YXq-3X-ZU7" firstAttribute="top" secondItem="WKW-qd-BQE" secondAttribute="top" constant="10" id="zEs-Cr-W8m"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="WKW-qd-BQE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aZy-J1-dN1"/>
+                    <constraint firstAttribute="bottom" secondItem="WKW-qd-BQE" secondAttribute="bottom" constant="10" id="flM-SS-Lpb"/>
+                    <constraint firstItem="WKW-qd-BQE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="hVL-xw-Waa"/>
+                    <constraint firstAttribute="trailing" secondItem="WKW-qd-BQE" secondAttribute="trailing" constant="15" id="wN6-En-eIB"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="collectionView" destination="sxn-wT-1VI" id="dTo-F7-X1h"/>
+            </connections>
+            <point key="canvasLocation" x="150.72463768115944" y="135.9375"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="huanyihua" width="14" height="14"/>
+    </resources>
+</document>

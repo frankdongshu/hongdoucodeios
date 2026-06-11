@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="66" id="KGk-i7-Jjw" customClass="HLInviteorCodeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="337" height="66"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="337" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的推荐人" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="azO-BC-wAW">
+                        <rect key="frame" x="15" y="22.5" width="100" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="100" id="DvU-FV-DwE"/>
+                            <constraint firstAttribute="height" constant="21" id="Kud-6k-Zc7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.24705882352941178" green="0.27450980392156865" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1234QWERASD" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ad3-Nf-Spa">
+                        <rect key="frame" x="168.5" y="23" width="107.5" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="YM6-Er-wm0"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.2470588235" green="0.27450980390000002" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vwN-0M-n1i">
+                        <rect key="frame" x="282" y="23" width="40" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="2cc-O2-lOh"/>
+                            <constraint firstAttribute="height" constant="20" id="faG-R5-Y3V"/>
+                        </constraints>
+                        <state key="normal" image="icon_invite"/>
+                        <connections>
+                            <action selector="inviteClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="i7w-zD-4Ut"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7FR-NU-iBW">
+                        <rect key="frame" x="287" y="15.5" width="35" height="35"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="THo-D9-aUG"/>
+                            <constraint firstAttribute="height" constant="35" id="baS-Xc-lKZ"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w0V-8F-lee">
+                        <rect key="frame" x="291" y="18" width="31" height="30"/>
+                        <state key="normal" title="复制"/>
+                        <connections>
+                            <action selector="fuZhiClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="R66-7w-PjJ"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ad3-Nf-Spa" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="azO-BC-wAW" secondAttribute="trailing" constant="10" id="1UB-9r-KE3"/>
+                    <constraint firstItem="w0V-8F-lee" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="1fN-ut-mFf"/>
+                    <constraint firstItem="azO-BC-wAW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="6gK-Za-LWa"/>
+                    <constraint firstAttribute="trailing" secondItem="vwN-0M-n1i" secondAttribute="trailing" constant="15" id="6xI-Tx-Gfo"/>
+                    <constraint firstItem="7FR-NU-iBW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Cdf-VJ-BLC"/>
+                    <constraint firstItem="w0V-8F-lee" firstAttribute="leading" secondItem="ad3-Nf-Spa" secondAttribute="trailing" constant="15" id="La1-bc-1GP"/>
+                    <constraint firstItem="vwN-0M-n1i" firstAttribute="centerY" secondItem="azO-BC-wAW" secondAttribute="centerY" id="ZLq-aZ-FX1"/>
+                    <constraint firstAttribute="trailing" secondItem="7FR-NU-iBW" secondAttribute="trailing" constant="15" id="pns-vT-RnS"/>
+                    <constraint firstItem="azO-BC-wAW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tV6-us-y9y"/>
+                    <constraint firstItem="ad3-Nf-Spa" firstAttribute="centerY" secondItem="azO-BC-wAW" secondAttribute="centerY" id="xXB-2s-Phc"/>
+                    <constraint firstAttribute="trailing" secondItem="w0V-8F-lee" secondAttribute="trailing" constant="15" id="z60-1m-dOQ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="ad3-Nf-Spa" id="5nw-lS-wIX"/>
+                <outlet property="fuZhiBtn" destination="w0V-8F-lee" id="7Ma-lP-L90"/>
+                <outlet property="inviteButton" destination="vwN-0M-n1i" id="1Nd-6c-1yM"/>
+                <outlet property="inviteImgV" destination="7FR-NU-iBW" id="QaQ-cO-b0w"/>
+                <outlet property="titleLabel" destination="azO-BC-wAW" id="bkI-61-nBp"/>
+            </connections>
+            <point key="canvasLocation" x="58.695652173913047" y="42.857142857142854"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_invite" width="19" height="19"/>
+    </resources>
+</document>

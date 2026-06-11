@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="HLPrivacyManageTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="75"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_head" translatesAutoresizingMaskIntoConstraints="NO" id="4cV-wI-Ivs">
+                        <rect key="frame" x="15" y="14" width="44" height="44"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="44" id="6RC-8D-7YD"/>
+                            <constraint firstAttribute="height" constant="44" id="obc-UV-kkv"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="章小蕙" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="97d-9y-OrY">
+                        <rect key="frame" x="74" y="14" width="201" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="OC5-bD-hWN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.24705882352941178" green="0.27450980392156865" blue="0.34509803921568627" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28岁 · 175cm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zlr-Ax-3mG">
+                        <rect key="frame" x="74" y="42.5" width="201" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="17" id="zYm-Ho-GaV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.55294117647058827" green="0.60392156862745094" blue="0.67450980392156867" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="79B-Lv-czs">
+                        <rect key="frame" x="292" y="21" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="RjB-Hq-Mus"/>
+                            <constraint firstAttribute="height" constant="30" id="vCv-l9-8vR"/>
+                        </constraints>
+                        <state key="normal" image="privacy_dele">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="n5x-Zk-LI9"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4cV-wI-Ivs" secondAttribute="bottom" constant="20" symbolic="YES" id="89y-6X-mtJ"/>
+                    <constraint firstAttribute="trailing" secondItem="zlr-Ax-3mG" secondAttribute="trailing" constant="60" id="Cnt-4s-yWg"/>
+                    <constraint firstAttribute="trailing" secondItem="97d-9y-OrY" secondAttribute="trailing" constant="60" id="P3a-9w-h10"/>
+                    <constraint firstItem="97d-9y-OrY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="Tqm-Qw-iAj"/>
+                    <constraint firstItem="zlr-Ax-3mG" firstAttribute="leading" secondItem="4cV-wI-Ivs" secondAttribute="trailing" constant="15" id="Wgd-5s-sKN"/>
+                    <constraint firstItem="zlr-Ax-3mG" firstAttribute="top" secondItem="97d-9y-OrY" secondAttribute="bottom" constant="8.5" id="edp-b5-WdO"/>
+                    <constraint firstItem="4cV-wI-Ivs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="14" id="eud-le-3du"/>
+                    <constraint firstItem="97d-9y-OrY" firstAttribute="leading" secondItem="4cV-wI-Ivs" secondAttribute="trailing" constant="15" id="i2P-pI-0pO"/>
+                    <constraint firstItem="4cV-wI-Ivs" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="mNV-xc-oBp"/>
+                    <constraint firstItem="79B-Lv-czs" firstAttribute="centerY" secondItem="4cV-wI-Ivs" secondAttribute="centerY" id="rbT-pI-UEk"/>
+                    <constraint firstAttribute="trailing" secondItem="79B-Lv-czs" secondAttribute="trailing" constant="13" id="xb9-DL-TwO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="zlr-Ax-3mG" id="i6j-xP-Etc"/>
+                <outlet property="deleteBtn" destination="79B-Lv-czs" id="adJ-qh-URw"/>
+                <outlet property="headImageView" destination="4cV-wI-Ivs" id="WEX-iH-4WN"/>
+                <outlet property="nameLabel" destination="97d-9y-OrY" id="Jq1-mq-oE5"/>
+            </connections>
+            <point key="canvasLocation" x="148.55072463768118" y="134.26339285714286"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_head" width="49" height="49"/>
+        <image name="privacy_dele" width="18" height="17.5"/>
+    </resources>
+</document>

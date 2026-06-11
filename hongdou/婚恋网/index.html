@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>H5 调用 Native</title>
+            <style>
+                h1 {
+                    margin-top: 80px; /* 调整顶部间距 */
+                }
+            </style>
+</head>
+<body>
+    <h1>H5 调用 iOS Native Demo</h1>
+    <button onclick="callNative()">调用 OC 方法</button>
+
+    <script>
+        function callNative() {
+     
+            if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.callApplePayToBuy) {
+                alert("当前环境支持哈调用 OC 方法");
+                window.webkit.messageHandlers.callApplePayToBuy.postMessage("Hello from H5");
+            } else {
+                alert("当前环境不支持调用 OC 方法");
+            }
+        }
+    </script>
+    <script>
+        function refreshPage(message) {
+              alert("Native 调用了 JS 方法，参数: " + message);
+              console.log("收到来自 iOS 的消息: " + message);
+          }
+    </script>
+</body>
+</html>

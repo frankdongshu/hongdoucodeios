@@ -1,0 +1,72 @@
+//
+//  PrefixHeader.pch
+//  婚恋网
+//
+//  Created by iMac on 2019/3/1.
+//  Copyright © 2019年 红豆-婚恋网. All rights reserved.
+//
+
+#ifndef PrefixHeader_h
+#define PrefixHeader_h
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+#import "HLDefines.h"
+#import "Setup.h"
+#import "ZJKitTool.h"
+
+#import "FrameAccessor.h"
+#import "EXTScope.h"
+
+#import "HXNavigation.h"
+#import "HXThemeSettingManager.h"
+#import "HLHTTPSessionManager.h"
+#import "HTTPSessionManger.h" // 家教网络请求封装
+#import "LoginManager.h"
+#import "MyLogin.h" // 家教
+
+#import "UIColor+HYLHelper.h"
+#import "UITextField+HYLHelp.h"
+#import "UITableViewCell+HYLHelp.h"
+#import "UIView+AZGradient.h"
+#import "NSString+HXString.h"
+#import "UIView+loading.h"
+#import "HXDictionary.h"
+#import "UIDevice+HXDevice.h"
+#import "MBProgressHUD+Add.h"
+#import "UIView+MBProgressHUD.h"
+#import "UIAlertController+TapGesAlertController.h"
+#import "ViewUtil.h"
+
+
+#import "JXCategoryView.h"
+#import "XBZKeyBoardDefine.h"
+
+
+#import "MJExtension.h"
+#import <Masonry/Masonry.h>
+#import "MJRefresh.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <YYKit/YYKit.h>
+#import <ShareSDK/ShareSDK.h>
+#import <ShareSDKUI/ShareSDK+SSUI.h>
+
+#import "BRPickerView.h"
+#import "BRStringPickerView.h"
+#import <JMessage/JMessage.h>
+#import <JPUSHService.h>
+
+#import "AppDelegate.h"
+#import "UITabBar+HLBadge.h"
+
+#import "UIButton+LXExpandBtn.h"
+#import "NSString+Extension.h"
+#import "UIColor+LXExpand.h"
+
+#import <JVERIFICATIONService.h> // 一键登录
+
+#import "HLGoVipViewController.h"
+#import "HLChatController.h"
+#import "XMUserManager.h"
+
+#endif /* PrefixHeader_h */

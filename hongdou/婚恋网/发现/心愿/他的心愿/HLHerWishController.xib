@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HLHerWishController">
+            <connections>
+                <outlet property="bottomBtn" destination="lj7-JE-x3p" id="6FX-Cg-Yoz"/>
+                <outlet property="btn" destination="qxX-YP-CZa" id="qNS-hq-x1n"/>
+                <outlet property="imgView" destination="JTA-9T-qgG" id="Fm1-cR-sb4"/>
+                <outlet property="leftLab" destination="EJj-gr-cqW" id="lCc-BL-A7s"/>
+                <outlet property="rightLab" destination="FQR-QY-wg5" id="qmW-WJ-xoy"/>
+                <outlet property="topBtn" destination="owU-Ag-500" id="qOu-T3-fXS"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JTA-9T-qgG">
+                    <rect key="frame" x="16" y="109" width="382" height="130"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="130" id="mnw-26-sfB"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EJj-gr-cqW">
+                    <rect key="frame" x="16" y="251" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.24705882352941178" green="0.27450980392156865" blue="0.3411764705882353" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FQR-QY-wg5">
+                    <rect key="frame" x="360.5" y="251" width="37.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.2470588235" green="0.27450980390000002" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxX-YP-CZa">
+                    <rect key="frame" x="71" y="309" width="272" height="38"/>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.91764705879999997" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="I8n-6i-vNB"/>
+                        <constraint firstAttribute="width" constant="272" id="SzD-FD-4bt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="帮TA助力">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="btnClick:" destination="-1" eventType="touchUpInside" id="eFn-0l-IGs"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="owU-Ag-500">
+                    <rect key="frame" x="157.5" y="377" width="99" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="红豆剩余:0购买">
+                        <color key="titleColor" red="0.2470588235" green="0.27450980390000002" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="weihaoClick:" destination="-1" eventType="touchUpInside" id="UVG-d7-3UA"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lj7-JE-x3p">
+                    <rect key="frame" x="160.5" y="426" width="93" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="如何获得红豆?">
+                        <color key="titleColor" red="0.2470588235" green="0.27450980390000002" blue="0.3411764706" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="youjiClick:" destination="-1" eventType="touchUpInside" id="XIl-Wi-Ntb"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="JTA-9T-qgG" secondAttribute="trailing" constant="16" id="31O-oB-ohH"/>
+                <constraint firstItem="owU-Ag-500" firstAttribute="top" secondItem="qxX-YP-CZa" secondAttribute="bottom" constant="30" id="91d-IV-K3p"/>
+                <constraint firstItem="owU-Ag-500" firstAttribute="centerX" secondItem="qxX-YP-CZa" secondAttribute="centerX" id="95z-F0-Xge"/>
+                <constraint firstItem="lj7-JE-x3p" firstAttribute="top" secondItem="owU-Ag-500" secondAttribute="bottom" constant="20" id="Al1-cQ-NX2"/>
+                <constraint firstItem="FQR-QY-wg5" firstAttribute="trailing" secondItem="JTA-9T-qgG" secondAttribute="trailing" id="DCe-xw-d7P"/>
+                <constraint firstItem="qxX-YP-CZa" firstAttribute="top" secondItem="JTA-9T-qgG" secondAttribute="bottom" constant="70" id="Vuf-K3-K5H"/>
+                <constraint firstItem="lj7-JE-x3p" firstAttribute="centerX" secondItem="owU-Ag-500" secondAttribute="centerX" id="Y67-Wv-hym"/>
+                <constraint firstItem="EJj-gr-cqW" firstAttribute="top" secondItem="JTA-9T-qgG" secondAttribute="bottom" constant="12" id="d5C-zT-4xI"/>
+                <constraint firstItem="JTA-9T-qgG" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="iog-zR-mH3"/>
+                <constraint firstItem="JTA-9T-qgG" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="65" id="p09-aH-tMl"/>
+                <constraint firstItem="EJj-gr-cqW" firstAttribute="leading" secondItem="JTA-9T-qgG" secondAttribute="leading" id="wTb-pD-b7T"/>
+                <constraint firstItem="FQR-QY-wg5" firstAttribute="top" secondItem="JTA-9T-qgG" secondAttribute="bottom" constant="12" id="xwJ-Q3-cSH"/>
+                <constraint firstItem="qxX-YP-CZa" firstAttribute="centerX" secondItem="JTA-9T-qgG" secondAttribute="centerX" id="xzm-eE-byF"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="55.580357142857139"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
