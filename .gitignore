@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # macOS
 .DS_Store
 __MACOSX/
@@ -39,3 +40,39 @@ Carthage/Build
 .idea/
 *.swp
 *.swo
+=======
+# Xcode
+*.xcworkspace/xcuserdata/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+DerivedData/
+Build/
+
+# CocoaPods
+Pods/
+*.xcworkspace/xcshareddata/
+
+# OS X
+.DS_Store
+__MACOSX/
+Icon?
+
+# IDE
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+
+# Binary / Static Libraries
+*.a
+*.framework/
+*.dylib
+
+# Others
+*.ipa
+*.dSYM.zip
+*.dSYM
+>>>>>>> e72f5a9cf45862a4042e8e8ef18de2c50a07c8e7

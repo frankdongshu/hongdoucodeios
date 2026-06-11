@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="202" id="KGk-i7-Jjw" customClass="HLPhotoManageTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="363" height="202"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="363" height="202"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="一个人吃饭旅行打打闹闹走走停停一个人吃饭旅行打打闹闹走走停停" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixe-8Z-VWi">
+                        <rect key="frame" x="15" y="10" width="333" height="38.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="G1e-Sh-N2M"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" red="0.30196078431372547" green="0.34509803921568627" blue="0.45098039215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RA9-JV-kHg">
+                        <rect key="frame" x="15" y="63.5" width="333" height="80.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" id="v9j-YN-2tC"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PS2-wH-iMi">
+                        <rect key="frame" x="23" y="160" width="40" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="bX9-al-lsY"/>
+                            <constraint firstAttribute="height" constant="30" id="eWi-Aq-sRP"/>
+                        </constraints>
+                        <state key="normal" title="删除">
+                            <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <connections>
+                            <action selector="deleteClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WGr-Uo-o9z"/>
+                        </connections>
+                    </button>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxj-GG-Rcy">
+                        <rect key="frame" x="304" y="164.5" width="44" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Gn5-fg-CGe"/>
+                            <constraint firstAttribute="height" constant="21" id="YTY-HS-EUb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jwe-Ze-T9c">
+                        <rect key="frame" x="266" y="160" width="80" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="7Ra-5b-3ak"/>
+                            <constraint firstAttribute="width" constant="80" id="zrw-hi-uBb"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <state key="normal" image="unlike"/>
+                        <connections>
+                            <action selector="colletionClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Ldl-uc-Twb"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PS2-wH-iMi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="23" id="7V3-qj-Cun"/>
+                    <constraint firstAttribute="trailing" secondItem="RA9-JV-kHg" secondAttribute="trailing" constant="15" id="8yI-mZ-w8l"/>
+                    <constraint firstItem="RA9-JV-kHg" firstAttribute="top" secondItem="ixe-8Z-VWi" secondAttribute="bottom" constant="15" id="EPx-H3-sjn"/>
+                    <constraint firstAttribute="trailing" secondItem="cxj-GG-Rcy" secondAttribute="trailing" constant="15" id="H6S-Ue-AMy"/>
+                    <constraint firstItem="RA9-JV-kHg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="IWA-CH-JOy"/>
+                    <constraint firstItem="cxj-GG-Rcy" firstAttribute="trailing" secondItem="jwe-Ze-T9c" secondAttribute="trailing" constant="2" id="KU5-Ol-0nS"/>
+                    <constraint firstAttribute="trailing" secondItem="ixe-8Z-VWi" secondAttribute="trailing" constant="15" id="Q0F-if-iRb"/>
+                    <constraint firstItem="jwe-Ze-T9c" firstAttribute="centerY" secondItem="PS2-wH-iMi" secondAttribute="centerY" id="SNj-FX-FNX"/>
+                    <constraint firstItem="ixe-8Z-VWi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="bmG-ur-hOG"/>
+                    <constraint firstItem="PS2-wH-iMi" firstAttribute="top" secondItem="RA9-JV-kHg" secondAttribute="bottom" constant="16" id="g7b-3F-OzH"/>
+                    <constraint firstAttribute="bottom" secondItem="PS2-wH-iMi" secondAttribute="bottom" constant="12" id="mQK-es-H28"/>
+                    <constraint firstItem="cxj-GG-Rcy" firstAttribute="centerY" secondItem="PS2-wH-iMi" secondAttribute="centerY" id="oFh-7x-W4v"/>
+                    <constraint firstItem="ixe-8Z-VWi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="qCS-Gw-Oza"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="collectionButtn" destination="jwe-Ze-T9c" id="Tge-NU-5ye"/>
+                <outlet property="contenView" destination="RA9-JV-kHg" id="yXN-l5-RXo"/>
+                <outlet property="deleteButton" destination="PS2-wH-iMi" id="cmv-h6-TQ0"/>
+                <outlet property="likeNumLable" destination="cxj-GG-Rcy" id="Ti4-av-LYh"/>
+                <outlet property="titleLable" destination="ixe-8Z-VWi" id="sFU-KJ-Ad9"/>
+            </connections>
+            <point key="canvasLocation" x="81.884057971014499" y="87.723214285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="unlike" width="17" height="17"/>
+    </resources>
+</document>

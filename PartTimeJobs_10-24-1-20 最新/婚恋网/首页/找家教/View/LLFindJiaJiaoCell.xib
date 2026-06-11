@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="136" id="KGk-i7-Jjw" customClass="LLFindJiaJiaoCell">
+            <rect key="frame" x="0.0" y="0.0" width="366" height="136"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="366" height="136"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DDD-eH-71F">
+                        <rect key="frame" x="10" y="15" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="OHT-Pj-4X0"/>
+                            <constraint firstAttribute="width" constant="60" id="WoY-xR-rv9"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="30"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="小学英语" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pJ-Bf-U0E">
+                        <rect key="frame" x="82" y="15" width="64" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="在校大学生|老师上门|学生上门|网络授课" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbA-RE-ERK">
+                        <rect key="frame" x="82" y="43" width="253.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描述：成都某211大学毕业，空闲时间多，曾经指教火锅一年，目前长期空闲" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGd-PP-pT8">
+                        <rect key="frame" x="82" y="68" width="269" height="29"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2020/10/15 12:27" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzv-ma-uAm">
+                        <rect key="frame" x="82" y="105" width="104" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="价格/小时" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="75r-eN-3B8">
+                        <rect key="frame" x="289" y="15" width="62" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.89411764709999997" green="0.3803921569" blue="0.31764705879999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hbA-RE-ERK" firstAttribute="top" secondItem="4pJ-Bf-U0E" secondAttribute="bottom" constant="8" id="1kc-ye-Ua3"/>
+                    <constraint firstItem="vzv-ma-uAm" firstAttribute="leading" secondItem="DDD-eH-71F" secondAttribute="trailing" constant="12" id="2Rf-dL-DaM"/>
+                    <constraint firstItem="4pJ-Bf-U0E" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="2mc-Ht-Dsw"/>
+                    <constraint firstAttribute="trailing" secondItem="75r-eN-3B8" secondAttribute="trailing" constant="15" id="72t-nQ-eZK"/>
+                    <constraint firstItem="vzv-ma-uAm" firstAttribute="top" secondItem="YGd-PP-pT8" secondAttribute="bottom" constant="8" id="Abq-Fn-Cmf"/>
+                    <constraint firstItem="4pJ-Bf-U0E" firstAttribute="leading" secondItem="DDD-eH-71F" secondAttribute="trailing" constant="12" id="MZe-28-P5R"/>
+                    <constraint firstItem="75r-eN-3B8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="Ud1-nS-3sV"/>
+                    <constraint firstItem="YGd-PP-pT8" firstAttribute="top" secondItem="hbA-RE-ERK" secondAttribute="bottom" constant="8" id="V5o-pG-nkr"/>
+                    <constraint firstItem="YGd-PP-pT8" firstAttribute="leading" secondItem="DDD-eH-71F" secondAttribute="trailing" constant="12" id="dSj-UG-8Od"/>
+                    <constraint firstAttribute="trailing" secondItem="YGd-PP-pT8" secondAttribute="trailing" constant="15" id="nwA-2k-lMc"/>
+                    <constraint firstItem="DDD-eH-71F" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="uQv-LN-aS6"/>
+                    <constraint firstAttribute="bottom" secondItem="vzv-ma-uAm" secondAttribute="bottom" constant="15" id="uq4-sw-WKw"/>
+                    <constraint firstItem="DDD-eH-71F" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="wnZ-Hm-0gS"/>
+                    <constraint firstItem="hbA-RE-ERK" firstAttribute="leading" secondItem="DDD-eH-71F" secondAttribute="trailing" constant="12" id="xvL-sv-f2C"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="descLab" destination="YGd-PP-pT8" id="FBn-JA-2kc"/>
+                <outlet property="imgView" destination="DDD-eH-71F" id="1Qx-o5-Bas"/>
+                <outlet property="priceLab" destination="75r-eN-3B8" id="6aQ-LH-Lsc"/>
+                <outlet property="tagLab" destination="hbA-RE-ERK" id="ZhA-Fy-6VP"/>
+                <outlet property="timeLab" destination="vzv-ma-uAm" id="YvU-J5-irF"/>
+                <outlet property="titleLab" destination="4pJ-Bf-U0E" id="7oq-DH-FNA"/>
+            </connections>
+            <point key="canvasLocation" x="24.637681159420293" y="109.15178571428571"/>
+        </tableViewCell>
+    </objects>
+</document>

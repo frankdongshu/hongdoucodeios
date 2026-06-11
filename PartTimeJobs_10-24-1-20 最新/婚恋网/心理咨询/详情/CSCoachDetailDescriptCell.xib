@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="169" id="KGk-i7-Jjw" customClass="CSCoachDetailDescriptCell">
+            <rect key="frame" x="0.0" y="0.0" width="548" height="169"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="548" height="169"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSK-id-9Tr">
+                        <rect key="frame" x="15" y="0.0" width="518" height="169"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我们遇到什么困难，也不要怕，微笑着面对它，消除恐惧的最好办法就是面对恐惧，坚持，才是胜利！加油，奥利给! 没毛病，干就完了，奥利给！" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Nt-kW-4Xg">
+                                <rect key="frame" x="15" y="15" width="488" height="124"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="收起" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ekA-KM-Lkm">
+                                <rect key="frame" x="15" y="144" width="488" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="kFs-GT-cAx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92835897840000003" green="0.92835897840000003" blue="0.92835897840000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ekA-KM-Lkm" secondAttribute="bottom" constant="5" id="FvW-KE-Ztv"/>
+                            <constraint firstItem="7Nt-kW-4Xg" firstAttribute="leading" secondItem="DSK-id-9Tr" secondAttribute="leading" constant="15" id="Jt7-Q5-NnH"/>
+                            <constraint firstAttribute="trailing" secondItem="ekA-KM-Lkm" secondAttribute="trailing" constant="15" id="NC1-m1-c8s"/>
+                            <constraint firstItem="7Nt-kW-4Xg" firstAttribute="top" secondItem="DSK-id-9Tr" secondAttribute="top" constant="15" id="UHs-S4-Fxt"/>
+                            <constraint firstItem="ekA-KM-Lkm" firstAttribute="top" secondItem="7Nt-kW-4Xg" secondAttribute="bottom" constant="5" id="ZDp-RI-t6x"/>
+                            <constraint firstItem="ekA-KM-Lkm" firstAttribute="leading" secondItem="DSK-id-9Tr" secondAttribute="leading" constant="15" id="aMk-8f-JDg"/>
+                            <constraint firstAttribute="trailing" secondItem="7Nt-kW-4Xg" secondAttribute="trailing" constant="15" id="vam-67-qGu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="DSK-id-9Tr" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="3JM-cV-j7E"/>
+                    <constraint firstAttribute="trailing" secondItem="DSK-id-9Tr" secondAttribute="trailing" constant="15" id="UVi-cn-lok"/>
+                    <constraint firstItem="DSK-id-9Tr" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="bzw-cA-Nyz"/>
+                    <constraint firstAttribute="bottom" secondItem="DSK-id-9Tr" secondAttribute="bottom" id="rxo-sO-038"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="containerView" destination="DSK-id-9Tr" id="4db-MO-pdc"/>
+                <outlet property="lab" destination="7Nt-kW-4Xg" id="ZUQ-8t-DlT"/>
+                <outlet property="labHeight" destination="kFs-GT-cAx" id="Yxc-Uj-Ibm"/>
+            </connections>
+            <point key="canvasLocation" x="302.89855072463769" y="-10.379464285714285"/>
+        </tableViewCell>
+    </objects>
+</document>

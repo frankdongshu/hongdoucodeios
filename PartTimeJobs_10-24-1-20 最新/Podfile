@@ -1,0 +1,43 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+#source 'https://github.com/CocoaPods/Specs.git'
+
+target 'PartTimeJobs' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for PartTimeJobs
+
+  pod 'SDCycleScrollView', '~> 1.65'
+  pod 'XHLaunchAd', '~> 3.9.11'
+  pod 'SDWebImage', '~> 3.8.1'
+
+  pod 'TZImagePreviewController', '~> 0.3.1'
+  pod 'SCSiriWaveformView', '~> 1.1.1'
+  pod 'ReactiveCocoa','~>2.1.8'
+
+  pod 'SAMKeychain', '~> 1.5.0'
+
+  pod 'UIView+FDCollapsibleConstraints', '~> 1.1'
+  pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
+
+  pod 'FMDB', '~> 2.6.2'
+
+  pod 'AFDownloadRequestOperation', '~> 2.0.1'
+
+  pod 'hpple', '~> 0.2.0'
+
+  pod 'Masonry', '1.1.0'
+  
+  pod 'MJRefresh', '3.1.14.1'
+  
+  pod 'YYKit', '~> 1.0.9'
+  pod 'IGListKit', '~> 3.4.0'
+  
+  pod 'BRPickerView', '~> 2.9.1'
+  pod 'JMessage', '~> 3.9.1'
+  pod 'JPush', '3.2.6'
+  pod 'BaiduMapKit', '~> 4.1.1'
+  pod 'AvoidCrash', '~> 2.5.2'
+end
