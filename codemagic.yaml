@@ -8,10 +8,18 @@ workflows:
         XCODE_WORKSPACE: "hongdou/hongdou.xcworkspace"
         XCODE_SCHEME: "hongdou"
         BUNDLE_ID: "com.hongdou.wuyu"
-      # 需要替换成你自己的 Apple Store Connect API 密钥
-      # APP_STORE_CONNECT_ISSUER_ID: "你的ISSUER_ID"
-      # APP_STORE_CONNECT_KEY_IDENTIFIER: "你的KEY_ID"
+        APP_STORE_CONNECT_ISSUER_ID: "5ebaff43-62d2-4645-8e59-1714ad9794f5"
+        APP_STORE_CONNECT_KEY_IDENTIFIER: "NBP7P7363K"
     scripts:
+      - name: Setup API key file
+        script: |
+          set -e
+          mkdir -p ~/private_keys
+          echo "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZ3lldzYwQzdGUS9aSzRlZVQKVFU0Uldjcnc5RnM3bzZDWC91VXdieG5ndnJPZ0NnWUlLb1pJemowREFRZWhSQU5DQUFTTEM5KzVBeDMwZ3RVUgo5eW9mYlBiS1FEYkthMDNJLysyVnBYZlN2djZXUVFRcXBaa0xQd1RSMlUrY2xwZlZqZXNIa3V3SzR2ZWhRc2c0CjRHcEMyNzZQCi0tLS0tRU5EIFBSSVZBVEUgS0VZLS0tLS0=" \
+            | base64 -d > ~/private_keys/AuthKey_NBP7P7363K.p8
+          chmod 600 ~/private_keys/AuthKey_NBP7P7363K.p8
+          echo "API key file created"
+
       - name: Install CocoaPods dependencies
         script: |
           cd hongdou
