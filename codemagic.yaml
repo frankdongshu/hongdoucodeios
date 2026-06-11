@@ -1,60 +1,53 @@
 workflows:
   ios-build:
-    name: iOS Build
+    name: iOS Build - 红豆佳缘
     instance_type: mac_mini_m1
     max_build_duration: 120
     environment:
       vars:
-        XCODE_WORKSPACE: "PartTimeJobs.xcworkspace"
-        XCODE_SCHEME: "PartTimeJobs"
-        BUNDLE_ID: "com.student.PartTimeJobs"
-        APP_STORE_CONNECT_ISSUER_ID: "5ebaff43-62d2-4645-8e59-1714ad9794f5"
-        APP_STORE_CONNECT_KEY_IDENTIFIER: "NBP7P7363K"
+        XCODE_WORKSPACE: "hongdou/hongdou.xcworkspace"
+        XCODE_SCHEME: "hongdou"
+        BUNDLE_ID: "com.hongdou.wuyu"
+      # 需要替换成你自己的 Apple Store Connect API 密钥
+      # APP_STORE_CONNECT_ISSUER_ID: "你的ISSUER_ID"
+      # APP_STORE_CONNECT_KEY_IDENTIFIER: "你的KEY_ID"
     scripts:
-      - name: Setup API key file
+      - name: Install CocoaPods dependencies
         script: |
-          set -e
-          mkdir -p ~/private_keys
-          # 瑙ｇ爜 base64 绉侀挜鍒版枃浠?
-          echo "LS0tLS1CRUdJTiBQUklWQVRFIEtFWS0tLS0tCk1JR1RBZ0VBTUJNR0J5cUdTTTQ5QWdFR0NDcUdTTTQ5QXdFSEJIa3dkd0lCQVFRZ3lldzYwQzdGUS9aSzRlZVQKVFU0Uldjc3I5RnM3bzZDWC91VXdibnhndnJPZ0NnWUlLb1pJemowREFRZWhSTkFOQ0FBU0xDOSt1QXgzMGd0VVIKOXlvZmJQYUtRRGJLYTAzSS8rMlZwWGZTdnY2V1FRUXFwWmtMUHdUUjJVK2NscGZWamVzSGt1d0s0dmVoUXNnNAo0R3BDMjc2UAotLS0tLUVORCBQUklWQVRFIEtFWS0tLS0tCg==" \
-            | base64 -d > ~/private_keys/AuthKey_NBP7P7363K.p8
-          chmod 600 ~/private_keys/AuthKey_NBP7P7363K.p8
-          echo "API key file created: $(wc -c < ~/private_keys/AuthKey_NBP7P7363K.p8) bytes"
-      
+          cd hongdou
+          pod install
+
       - name: Set up keychain
         script: |
           keychain initialize
-      
+
       - name: Fetch signing files
         script: |
           app-store-connect fetch-signing-files "$BUNDLE_ID" \
             --type IOS_APP_ADHOC \
             --create
-      
+
       - name: Use system default keychain
         script: |
           keychain add-certificates
-      
+
       - name: Set up code signing settings
         script: |
           xcode-project use-profiles
-      
-      - name: Install CocoaPods dependencies
-        script: |
-          cd "PartTimeJobs_10-24-1-20 鏈€鏂?
-          pod install
-      
+
       - name: Build IPA
         script: |
-          cd "PartTimeJobs_10-24-1-20 鏈€鏂?
+          cd hongdou
           xcode-project build-ipa \
             --workspace "$XCODE_WORKSPACE" \
             --scheme "$XCODE_SCHEME"
+
     artifacts:
       - build/ios/ipa/*.ipa
       - /tmp/xcodebuild_logs/*.log
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
       - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+
     publishing:
       email:
         recipients:
